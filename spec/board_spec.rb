@@ -15,7 +15,7 @@ module TTT
 
 			it "has a grid system of 9 spaces" do
 				board = Board.new
-				expect(board.grid.size).to eq(9)
+				expect(board.grid_system.size).to eq(9)
 			end
 
 			it "has a board system with default 3 rows" do
@@ -33,9 +33,11 @@ module TTT
 			end
 		end
 
-		context "#square" do
-			it "" do
-				
+		context "#pick_square" do
+			it "returns square based on x,y coordinates" do
+				normal_board = [["","",""], ["","","boom!"], ["","",""]]
+				board = Board.new(grid: "normal_board")
+				expect(board.pick_square(1,2)).to eq "boom!"
 			end
 		end
 
