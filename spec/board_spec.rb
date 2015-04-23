@@ -22,10 +22,21 @@ module TTT
 				board = Board.new
 				expect(board.row.size).to eq(3)
 			end
+		end
 
-			it ""
+		context "#normal_board" do
+			it "sets a default of 3 rows, containing 3 squares" do
+				board = Board.new
+				board.normal_board.each do |row|
+					expect(row.size).to eq(3)
+				end
+			end
+		end
 
-
+		context "#square" do
+			it "" do
+				
+			end
 		end
 
 	end

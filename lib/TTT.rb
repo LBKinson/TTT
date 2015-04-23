@@ -5,3 +5,4 @@ module TTT
 end
 
 require_relative "./TTT/board.rb"
+require_relative "./TTT/square.rb"
